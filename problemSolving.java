@@ -166,7 +166,6 @@ public List<List<Integer>> threeSum(int[] nums) {
 
 //problem  Palindrome Number
 //ma première solution :
-class Solution {
     public boolean isPalindrome(int x) {
         if(x<0) return false;
         String s1 = String.valueOf(x);
@@ -215,7 +214,7 @@ public static boolean isPalindrome(int x) {
     return originalX == reversedNumber;
 }
 
-}
+
 
 
 
