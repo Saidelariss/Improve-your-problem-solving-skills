@@ -758,3 +758,22 @@ public static List<Integer> countFrequencies2(List<String> words) {
     }
 
 }
+
+// il existe plusieurs catégories de streams  : 
+                             BaseStream<T, S>
+                                   |
+        ----------------------------------------------------------
+        |                  |                 |                   |
+     Stream<T>         IntStream         DoubleStream         LongStream 
+        |                  |                 |                   |
+Object[] toArray()   int[] toArray()   double[] toArray()    long[] toArray();      
+
+// Juste pour vous rappeler de faire attention au type de stream sur lequel vous travaillez lorsque vous appelez une méthode comme toArray()
+//boxed() transforme un IntStream en Stream<Integer> (meme chose pour LongStream et DoubleStream )
+// Integer[] array = Arrays.stream(nums).boxed().toArray(Integer[]::new);
+// La méthode mapToObj est une méthode de IntStream, DoubleStream, LongStream, et non pas de Stream<T>, ce qui est logique
+// les méthodes mapToInt (qui trasnforme un Stream<T> ou DoubleStream ou LongStream en IntStream ), mapToDouble, mapToLong sont très utiles
+//par exemple transfomer une collection de Long en un tableau de int : 
+        // Collection<Long> collection;
+        // ....
+        // int[] array = collection.stream().mapToInt(Long::intValue).toArray();
