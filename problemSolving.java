@@ -722,7 +722,7 @@ public static List<Integer> count_frequencies(List<String> words){
     }
 
 // Map<R,T> collect(Collectors.groupingBy(Function(T,R)))
-// c est très important lorsque vous voulez faire des regroupement selon un critère
+// c est très important lorsque vous voulez faire des regroupements selon un critère
 // par exemple : Groupement par longueur de chaîne
 //  List<String> words = Arrays.asList("apple", "banana", "orange", "kiwi", "grape");
 
@@ -757,7 +757,7 @@ public static List<Integer> countFrequencies2(List<String> words) {
         return collect;
     }
 
-}
+
 
 // il existe plusieurs catégories de streams  : 
                              BaseStream<T, S>
@@ -777,3 +777,41 @@ Object[] toArray()   int[] toArray()   double[] toArray()    long[] toArray();
         // Collection<Long> collection;
         // ....
         // int[] array = collection.stream().mapToInt(Long::intValue).toArray();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
